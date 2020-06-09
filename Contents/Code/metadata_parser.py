@@ -30,7 +30,7 @@ def parse_detail_metadata(media, metadata):
         metadata.studio = json_data['studio']
     if 'content_rating' in json_data:
         metadata.content_rating = get_content_rating(json_data['content_rating'], Prefs['content_rating'])
-    if 'rating' in json_data:
+    if 'rating' in json_data and json_data['rating']:
         metadata.rating = float(json_data['rating'])
     if 'summary' in json_data:
         metadata.summary = json_data['summary']
@@ -106,7 +106,7 @@ def parse_detail_metadata(media, metadata):
                         episode.title = episode_data['title']
                     if 'summary' in episode_data:
                         episode.summary = episode_data['summary']
-                    if 'originally_available_at' in episode_data:
+                    if 'originally_available_at' in episode_data and episode_data['originally_available_at']:
                         episode.originally_available_at = Datetime.ParseDate(episode_data['originally_available_at']).date()
                     if 'rating' in episode_data:
                         episode.rating = episode_data['rating']
