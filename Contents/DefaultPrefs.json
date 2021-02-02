@@ -57,8 +57,8 @@
     "type": "enum",
     "values": [
       "ORIGINAL",
-      "KMRB",
-      "MPAA"
+      "KCSC",
+      "TVPG"
     ],
     "default": "ORIGINAL"
   }

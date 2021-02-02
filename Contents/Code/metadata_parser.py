@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
-import os
 import unicodedata
-import urllib
 from .common_function import get_metadata_path, set_multimedia_info, LibraryType
 from .content_rating import get_content_rating
 
